@@ -9,12 +9,16 @@ for (const suit of suits) {
 }
 
 export class Deck {
-  private _cards: Card[] = [...freshDeck]
-  constructor(private _random: Random = Math) {}
-
   public get size(): number {
     return this._cards.length
   }
+
+  public static from(deck: Deck): Deck {
+    return new Deck(deck._random)
+  }
+
+  private _cards: Card[] = [...freshDeck]
+  constructor(private _random: Random = Math) {}
 
   public draw(): Card {
     this._checkCardsLeft()

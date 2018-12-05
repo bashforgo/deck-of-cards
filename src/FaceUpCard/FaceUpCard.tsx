@@ -158,11 +158,11 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case FOUR:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
@@ -172,14 +172,14 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case FIVE:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
@@ -189,15 +189,15 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case SIX:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
@@ -207,16 +207,16 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case SEVEN:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
@@ -226,16 +226,16 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case EIGHT:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
@@ -246,17 +246,17 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case NINE:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
@@ -267,20 +267,20 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       case TEN:
         child = (
           <>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
             </Grid>
-            <Grid item container justify="space-evenly">
+            <Grid item container justify="space-around">
               <Icon className={color} />
               <Icon className={color} />
               <Icon className={color} />
@@ -306,7 +306,7 @@ class FaceUpCard extends Component<FaceUpCardProps & WithStyles> {
       <Grid
         container
         alignItems="center"
-        justify="space-evenly"
+        justify="space-around"
         direction="column"
         className={classes.face}
       >

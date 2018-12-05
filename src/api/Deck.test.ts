@@ -118,4 +118,17 @@ describe('Deck', () => {
       expect(() => defaultDeck.shuffle()).not.toThrowError('deck is empty')
     })
   })
+
+  describe('when cloning a deck', () => {
+    let deck: Deck
+
+    beforeEach(() => {
+      deck = Deck.from(freshDeck)
+    })
+
+    it('should create a new identical deck', () => {
+      expect(freshDeck).not.toBe(deck)
+      expect(freshDeck).toEqual(deck)
+    })
+  })
 })

@@ -24,7 +24,9 @@ const styles: StyleRulesCallback = (theme: Theme): StyleRules => ({
   card: {
     borderRadius: CREDIT_CARD_DIMENSIONS.borderRadius * SCALE_FACTOR,
     width: CREDIT_CARD_DIMENSIONS.width * SCALE_FACTOR,
+    minWidth: CREDIT_CARD_DIMENSIONS.width * SCALE_FACTOR,
     height: CREDIT_CARD_DIMENSIONS.height * SCALE_FACTOR,
+    minHeight: CREDIT_CARD_DIMENSIONS.height * SCALE_FACTOR,
   },
 })
 
