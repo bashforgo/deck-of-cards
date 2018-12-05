@@ -1,14 +1,14 @@
 {
-  "main.js": "/static/js/main.feafd67a.chunk.js",
-  "main.js.map": "/static/js/main.feafd67a.chunk.js.map",
-  "static/css/1.16520cf3.chunk.css": "/static/css/1.16520cf3.chunk.css",
-  "static/js/1.c442c988.chunk.js": "/static/js/1.c442c988.chunk.js",
-  "static/js/1.c442c988.chunk.js.map": "/static/js/1.c442c988.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/index.css": "/static/media/roboto-latin-900italic.7b770d6c.woff2",
-  "static/css/1.16520cf3.chunk.css.map": "/static/css/1.16520cf3.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.bf443ce93c74289956592d2cc5b73197.js": "/precache-manifest.bf443ce93c74289956592d2cc5b73197.js",
-  "service-worker.js": "/service-worker.js"
+  "main.js": "/deck-of-cards/static/js/main.feafd67a.chunk.js",
+  "main.js.map": "/deck-of-cards/static/js/main.feafd67a.chunk.js.map",
+  "static/css/1.553355db.chunk.css": "/deck-of-cards/static/css/1.553355db.chunk.css",
+  "static/js/1.d03d0ca5.chunk.js": "/deck-of-cards/static/js/1.d03d0ca5.chunk.js",
+  "static/js/1.d03d0ca5.chunk.js.map": "/deck-of-cards/static/js/1.d03d0ca5.chunk.js.map",
+  "runtime~main.js": "/deck-of-cards/static/js/runtime~main.f317f0df.js",
+  "runtime~main.js.map": "/deck-of-cards/static/js/runtime~main.f317f0df.js.map",
+  "static/media/index.css": "/deck-of-cards/static/media/roboto-latin-900italic.7b770d6c.woff2",
+  "static/css/1.553355db.chunk.css.map": "/deck-of-cards/static/css/1.553355db.chunk.css.map",
+  "index.html": "/deck-of-cards/index.html",
+  "precache-manifest.d6e556626f764d753258b759db7165be.js": "/deck-of-cards/precache-manifest.d6e556626f764d753258b759db7165be.js",
+  "service-worker.js": "/deck-of-cards/service-worker.js"
 }
