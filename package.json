@@ -1,7 +1,12 @@
 {
   "name": "deck-of-cards",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://speedodevo.github.io/deck-of-cards/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SpeedoDevo/deck-of-cards.git"
+  },
   "dependencies": {
     "@material-ui/core": "3.6.1",
     "@types/jest": "23.3.10",
@@ -20,7 +25,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,6 +48,7 @@
     "@types/enzyme-adapter-react-16": "1.0.3",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
+    "gh-pages": "2.0.1",
     "tslint": "5.11.0",
     "tslint-config-airbnb": "5.11.1",
     "tslint-config-prettier": "1.17.0",
