@@ -22,7 +22,8 @@ const styles: StyleRulesCallback = (theme: Theme): StyleRules => ({
   container: {
     marginRight: MAX_FACE_DOWN * X_SCALE_FACTOR,
     marginBottom: MAX_FACE_DOWN * Y_SCALE_FACTOR,
-    position: 'relative',
+    display: 'grid',
+    grid: '1fr / 1fr',
   },
   empty: {
     marginRight: MAX_FACE_DOWN * X_SCALE_FACTOR,
@@ -30,26 +31,20 @@ const styles: StyleRulesCallback = (theme: Theme): StyleRules => ({
     opacity: 0.5,
   },
   card: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    width: '100%',
-    height: '100%',
+    gridRow: '1 / -1',
+    gridColumn: '1 / -1',
     ...((): StyleRules => {
       const result: StyleRules = {}
 
-      Array(MAX_FACE_DOWN)
-        .fill(0)
-        .forEach((_: number, i: number) => {
-          const n: number = i + 1
-          const x: number = X_SCALE_FACTOR * i
-          const y: number = Y_SCALE_FACTOR * i
-          result[`&:nth-child(${n})`] = {
-            transform: `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`,
-          }
-        })
+      Array.from({ length: MAX_FACE_DOWN }).forEach((_: unknown, i: number) => {
+        const n: number = i + 1
+        const x: number = X_SCALE_FACTOR * i
+        const y: number = Y_SCALE_FACTOR * i
+        result[`&:nth-child(${n})`] = {
+          transform: `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`,
+        }
+      })
 
-      result[`&:nth-child(1)`].position = 'unset'
       return result
     })(),
   },

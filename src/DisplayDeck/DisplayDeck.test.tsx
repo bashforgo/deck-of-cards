@@ -210,7 +210,6 @@ describe('DisplayDeck', () => {
         ),
       ).toMatchObject({
         transform: 'translate(0.0px, 0.0px)',
-        position: 'unset',
       })
     })
   })

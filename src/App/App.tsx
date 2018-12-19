@@ -6,13 +6,7 @@ import {
   WithStyles,
   withStyles,
 } from '@material-ui/core/styles'
-import React, {
-  ChangeEvent,
-  Component,
-  ComponentType,
-  FormEvent,
-  ReactNode,
-} from 'react'
+import React, { ChangeEvent, Component, FormEvent, ReactNode } from 'react'
 import { Card, compareCardsReverse, Deck } from '../api'
 import DisplayDeck from '../DisplayDeck/DisplayDeck'
 import FaceUpCard from '../FaceUpCard/FaceUpCard'
@@ -29,24 +23,30 @@ const styles: StyleRulesCallback = (theme: Theme): StyleRules => ({
   container: {
     height: '100vh',
     width: '100vw',
+    display: 'grid',
     padding: theme.spacing.unit * 10,
+    gridTemplateAreas: `
+      "table deck"
+      "table controls"`,
+    gridTemplateColumns: '3fr 1fr',
+    gridTemplateRows: '1fr 1fr',
     [theme.breakpoints.down('sm')]: {
+      gridTemplateAreas: `
+        "table table"
+        "deck controls"`,
+      gridTemplateColumns: '1fr 2fr',
+      gridTemplateRows: '2fr 1fr',
       padding: theme.spacing.unit,
-      flexDirection: 'column',
     },
   },
   table: {
-    display: 'flex',
+    gridArea: 'table',
     overflow: 'scroll',
     [theme.breakpoints.up('md')]: {
-      flex: '3 0 0',
-      height: '100%',
       alignContent: 'start',
     },
     [theme.breakpoints.down('sm')]: {
       flexWrap: 'nowrap',
-      flex: '2 0 0',
-      width: '100%',
       paddingLeft: MOBILE_CARD_OVERLAYING,
       alignItems: 'center',
     },
@@ -56,29 +56,20 @@ const styles: StyleRulesCallback = (theme: Theme): StyleRules => ({
       marginLeft: -MOBILE_CARD_OVERLAYING,
     },
   },
-  deckAndControls: {
-    display: 'flex',
-    flex: '1 0 0',
-    [theme.breakpoints.up('md')]: {
-      flexDirection: 'column',
-    },
-  },
   deck: {
-    flex: '1 0 0',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    gridArea: 'deck',
+    display: 'grid',
+    placeItems: 'center center',
     [theme.breakpoints.down('sm')]: {
       transform: 'scale(0.5)',
       margin: '-25%',
     },
   },
   controls: {
-    flex: '1 0 0',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'start',
-    justifyContent: 'space-around',
+    gridArea: 'controls',
+    display: 'grid',
+    placeItems: 'center start',
+    placeContent: 'space-evenly start',
     padding: theme.spacing.unit,
   },
 })
@@ -98,13 +89,18 @@ class App extends Component<WithStyles, AppState> {
 
   public render(): ReactNode {
     const { classes }: this['props'] = this.props
-    const { deck, drawAmount }: this['state'] = this.state
+    const { deck, drawAmount, table }: this['state'] = this.state
 
     return (
-      <Grid container className={classes.container}>
+      <main className={classes.container}>
         <CssBaseline />
-        <Grid container spacing={8} className={classes.table}>
-          {this.state.table
+        <Grid
+          container
+          spacing={8}
+          className={classes.table}
+          component="section"
+        >
+          {table
             .map((card: Card, i: number) => (
               <Grid
                 item
@@ -117,38 +113,40 @@ class App extends Component<WithStyles, AppState> {
             ))
             .reverse()}
         </Grid>
-        <div className={classes.deckAndControls}>
-          <div className={classes.deck}>
-            <DisplayDeck size={deck.size} />
-          </div>
-          <div className={classes.controls}>
-            <Button onClick={this.sort}>sort</Button>
-            <Button onClick={this.draw} disabled={!deck.size}>
-              draw one
-            </Button>
-            <form onSubmit={this.submit}>
-              <Grid container spacing={8}>
-                <Grid item xs={6}>
-                  <Button
-                    onClick={this.drawMultiple}
-                    disabled={deck.size < drawAmount}
-                  >
-                    draw
-                  </Button>
-                </Grid>
-                <Grid item xs={6}>
-                  <TextField
-                    onChange={this.onAmountChange}
-                    type="number"
-                    value={drawAmount}
-                  />
-                </Grid>
+        <section className={classes.deck}>
+          <DisplayDeck size={deck.size} />
+        </section>
+        <section className={classes.controls}>
+          <Button onClick={this.sort} disabled={!table.length}>
+            sort
+          </Button>
+          <Button onClick={this.draw} disabled={!deck.size}>
+            draw one
+          </Button>
+          <form onSubmit={this.submit}>
+            <Grid container spacing={8}>
+              <Grid item xs={6}>
+                <Button
+                  onClick={this.drawMultiple}
+                  disabled={deck.size < drawAmount}
+                >
+                  draw
+                </Button>
               </Grid>
-            </form>
-            <Button onClick={this.shuffleDeck}>shuffle deck</Button>
-          </div>
-        </div>
-      </Grid>
+              <Grid item xs={6}>
+                <TextField
+                  onChange={this.onAmountChange}
+                  type="number"
+                  value={drawAmount}
+                />
+              </Grid>
+            </Grid>
+          </form>
+          <Button onClick={this.shuffleDeck} disabled={!table.length}>
+            shuffle deck
+          </Button>
+        </section>
+      </main>
     )
   }
 
