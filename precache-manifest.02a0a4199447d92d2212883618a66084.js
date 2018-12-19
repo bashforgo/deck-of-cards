@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/deck-of-cards/static/media/roboto-latin-300italic.210a7c78.woff"
   },
   {
-    "revision": "feafd67aa9d2eaa70e21",
-    "url": "/deck-of-cards/static/js/main.feafd67a.chunk.js"
+    "revision": "9f281bbeebb41670eea9",
+    "url": "/deck-of-cards/static/js/main.9f281bbe.chunk.js"
   },
   {
-    "revision": "7b770d6c53423deb1a8e49d3c9175184",
-    "url": "/deck-of-cards/static/media/roboto-latin-900italic.7b770d6c.woff2"
+    "revision": "bc833e725c137257c2c42a789845d82f",
+    "url": "/deck-of-cards/static/media/roboto-latin-900italic.bc833e72.woff"
   },
   {
     "revision": "f317f0df2629cb3a97ae",
@@ -52,24 +52,16 @@ self.__precacheManifest = [
     "url": "/deck-of-cards/static/media/roboto-latin-300italic.d69924b9.woff2"
   },
   {
-    "revision": "6232f43d15b0e7a0bf0fe82e295bdd06",
-    "url": "/deck-of-cards/static/media/roboto-latin-100italic.6232f43d.woff2"
-  },
-  {
-    "revision": "8c2ade503b34e31430d6c98aa29a52a3",
-    "url": "/deck-of-cards/static/media/roboto-latin-900.8c2ade50.woff"
-  },
-  {
     "revision": "bafb105baeb22d965c70fe52ba6b49d9",
     "url": "/deck-of-cards/static/media/roboto-latin-400.bafb105b.woff"
   },
   {
-    "revision": "de8b7431b74642e830af4d4f4b513ec9",
-    "url": "/deck-of-cards/static/media/roboto-latin-500.de8b7431.woff"
+    "revision": "7b770d6c53423deb1a8e49d3c9175184",
+    "url": "/deck-of-cards/static/media/roboto-latin-900italic.7b770d6c.woff2"
   },
   {
-    "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
-    "url": "/deck-of-cards/static/media/roboto-latin-400italic.d8bcbe72.woff2"
+    "revision": "6232f43d15b0e7a0bf0fe82e295bdd06",
+    "url": "/deck-of-cards/static/media/roboto-latin-100italic.6232f43d.woff2"
   },
   {
     "revision": "9680d5a0c32d2fd084e07bbc4c8b2923",
@@ -84,24 +76,32 @@ self.__precacheManifest = [
     "url": "/deck-of-cards/static/media/roboto-latin-500italic.510dec37.woff2"
   },
   {
-    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
-    "url": "/deck-of-cards/static/media/roboto-latin-700italic.010c1aee.woff2"
+    "revision": "d8bcbe724fd6f4ba44d0ee6a2675890f",
+    "url": "/deck-of-cards/static/media/roboto-latin-400italic.d8bcbe72.woff2"
+  },
+  {
+    "revision": "de8b7431b74642e830af4d4f4b513ec9",
+    "url": "/deck-of-cards/static/media/roboto-latin-500.de8b7431.woff"
   },
   {
     "revision": "cf6613d1adf490972c557a8e318e0868",
     "url": "/deck-of-cards/static/media/roboto-latin-700.cf6613d1.woff"
   },
   {
-    "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
-    "url": "/deck-of-cards/static/media/roboto-latin-500italic.ffcc050b.woff"
+    "revision": "010c1aeee3c6d1cbb1d5761d80353823",
+    "url": "/deck-of-cards/static/media/roboto-latin-700italic.010c1aee.woff2"
   },
   {
     "revision": "846d1890aee87fde5d8ced8eba360c3a",
     "url": "/deck-of-cards/static/media/roboto-latin-700italic.846d1890.woff"
   },
   {
-    "revision": "bc833e725c137257c2c42a789845d82f",
-    "url": "/deck-of-cards/static/media/roboto-latin-900italic.bc833e72.woff"
+    "revision": "8c2ade503b34e31430d6c98aa29a52a3",
+    "url": "/deck-of-cards/static/media/roboto-latin-900.8c2ade50.woff"
+  },
+  {
+    "revision": "ffcc050b2d92d4b14a4fcb527ee0bcc8",
+    "url": "/deck-of-cards/static/media/roboto-latin-500italic.ffcc050b.woff"
   },
   {
     "revision": "d03d0ca5d99aae5d0a73",
@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/deck-of-cards/static/css/1.553355db.chunk.css"
   },
   {
-    "revision": "d0b26d5df7e8a1834fa95e61b9c7b7bd",
+    "revision": "f3ccb9b137ba4d4f4615b72f9044147d",
     "url": "/deck-of-cards/index.html"
   }
 ];
